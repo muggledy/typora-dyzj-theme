@@ -13,7 +13,7 @@
     --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
     --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */
     --tablefocusrow-color: rgba(100, 221, 221, 0.2); /* 表格鼠标悬停行颜色（淡蓝） */
-    --tableborder-color: gray; /* 表格边框色（黑色） */
+    --tableborder-color: #c5c5c5; /* 表格边框色（黑色） */
     --tablethbg-color: #f4fcff; /* 表格表头背景色（淡蓝） */
     --toc-color: #00a0a0; /* 目录颜色（绿色） */
     --atext-color: black; /* 超链接文本颜色（黑色） */
@@ -60,6 +60,20 @@ body {
     padding: 20px 30px 160px;
 }
 
+/*
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+*/
+
 #write p {
     line-height: 1.8rem;
     word-spacing: .05rem;
@@ -84,10 +98,6 @@ body>*:last-child {
 /** 超链接 **/
 
 
-a {
-    font-weight: 500;
-    padding: 0 2px;
-}
 #write a {
     border-bottom:2px solid var(--abottom-color);
     padding: 0 4px;
@@ -117,6 +127,14 @@ a {
     font-size: 15px;
 }
 
+/* 修复空链接（标题锚点）显示底部下划线的问题（padding引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，烦 */
+#write a:empty, #write a[alt="none"] {
+    padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
+    padding-right:0px;
+}
+#write a[alt="none"] span {
+    display: none; /*消除空格*/
+}
 
 /** 目录 **/
 
@@ -527,6 +545,11 @@ table tr:hover {
 }
 */
 
+/* 修复行间公式在手机端屏幕宽度较小时公式极端缩小的问题，但是打印为pdf时仍要设为100%，否则有滚动条 */
+.MathJax_SVG_Display svg{
+    max-width: inherit !important;
+}
+
 
 /** 行内代码 **/
 
@@ -554,6 +577,14 @@ tt {
 #write .md-footnote {
     background-color: var(--footnotebg-color);
     color: var(--footnote-color);
+}
+
+/* 脚注上标链接禁止显示下划线样式 */
+#write sup.md-footnote a{
+    color: inherit !important; /* 鼠标hover时禁止颜色发生变化 */
+    border-bottom: none;
+    padding: 1px;
+    background-color: inherit;
 }
 
 
@@ -640,6 +671,7 @@ hr { /* 来自next主题样式 */
     font-size: 0.8rem;
     color: white;
     border-radius: 2px;
+    /*background-color: white;*/
     border: 1px solid var(--taskborder-color);
     margin-top: -0.4rem;
     transition: all 0.2s linear;
@@ -651,6 +683,27 @@ hr { /* 来自next主题样式 */
     color: white;
     border: 1px solid var(--taskfocus-color);
     background-color: var(--taskfocus-color);
+    line-height: .9rem;
+}
+.md-task-list-item:before{
+    content: none !important;
+}
+
+#write input[type=checkbox] {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    left: -6px;
+    background-color: inherit;
+}
+
+
+/** 导出html文件，修复流程图在手机端高度太大的问题 **/
+
+
+.md-diagram-panel svg{
+    max-width: inherit !important;
+    height: inherit !important;
 }
 
 
@@ -851,6 +904,9 @@ footer {
     pre {
         word-wrap: break-word;
     }
+    .MathJax_SVG_Display svg{
+        max-width: 100% !important;
+    }
 }
 
 
@@ -910,13 +966,13 @@ footer {
 }
 
 /* 列表子项上下间隔调整 */
-#write ul:not(.ul-list) li *, #write ol li *, #write .ul .li *, #write .ol .li * {
+#write ul li *, #write ol li *, #write .ul .li *, #write .ol .li * {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 /* 列表上下间隔调整 */
-#write ul:not(.ul-list) li, #write ol li, #write .ul .li, #write .ol .li {
+#write ul li, #write ol li, #write .ul .li, #write .ol .li {
     margin-top: 7px;
     margin-bottom: 7px;
 }
