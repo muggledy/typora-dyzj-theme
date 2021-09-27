@@ -1,9 +1,9 @@
-/* 引入fontawesome图标样式 */
 @import './source/dy/css/all.min.css';
 @import './source/zj/fonts.css';
 :root {
     /* dy color */
-    --focus-color: #ff5d52; /* 选中（如文本）、点击某些元素（如标题）显示的颜色（偏红） */
+    --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
+    --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
     --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
     --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
     --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
@@ -37,15 +37,19 @@
     --detailsborder-color: #00c4b6; /* 折叠框边框色（绿色） */
     --body-color: #000000; /* 文本颜色 */
     --para-color: #000000; /* 段落文本颜色（黑色） */
+    /* dy font */
+    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+    --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
+
+
 
 html {
     font-size: 17px;
 }
 
 body {
-    font-family: "Vollkorn", Palatino, Times;
-    /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
+    font-family: var(--body-font);
     color: var(--body-color);
     -webkit-font-smoothing: antialiased;
     line-height: 1.8rem;
@@ -101,7 +105,7 @@ body>*:last-child {
 #write a {
     border-bottom:2px solid var(--abottom-color);
     padding: 0 4px;
-    padding-top: 2px;
+    /*padding-top: 2px;*/
     transition: .3s;
     color: var(--atext-color);
     text-decoration: none;
@@ -126,15 +130,30 @@ body>*:last-child {
     font-family: "Font Awesome 5 Free";
     font-size: 15px;
 }
+#write h2 a, #write h4 a, #write a[alt="null"]{
+    border-bottom: none !important;
+    /*color: var(--code-color);*/
+}
+h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
+    content: none !important;
+}
 
-/* 修复空链接（标题锚点）显示底部下划线的问题（padding引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，烦 */
+/* 修复空链接（标题锚点）显示底部下划线的问题（padding宽度引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，这将会使得链接“消失” */
 #write a:empty, #write a[alt="none"] {
     padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
     padding-right:0px;
 }
 #write a[alt="none"] span {
-    display: none; /*消除空格*/
+    display: none; /*消除空格或其他内容*/
 }
+
+/* 无样式超链接 */
+#write a[alt="null"]:hover{
+    background-color: inherit;
+    border-radius: 0px;
+    color: var(--atext-color);
+}
+
 
 /** 目录 **/
 
@@ -153,10 +172,16 @@ body>*:last-child {
     text-decoration: underline;
     /* border-bottom: 2px solid var(--toc-color);text-decoration: none; */
     color: var(--toc-color);
-    background-color: white;
+    background-color: inherit;
     border-radius: 0px;
 }
-
+#write a.md-toc-inner code{
+    color: var(--toc-color);
+    background-color: #f3f4f4;
+}
+#write a.md-toc-inner:hover:before {
+    content: none !important;
+}
 
 
 h1,
@@ -182,39 +207,23 @@ h6:hover a.anchor {
     text-decoration: none;
 }
 
-h1 tt,
 h1 code {
     font-size: inherit !important;
 }
-
-h2 tt,
 h2 code {
     font-size: inherit !important;
 }
-
-h3 tt,
 h3 code {
     font-size: inherit !important;
 }
-
-h4 tt,
 h4 code {
     font-size: inherit !important;
 }
-
-h5 tt,
 h5 code {
     font-size: inherit !important;
 }
-
-h6 tt,
 h6 code {
     font-size: inherit !important;
-}
-
-h2 a,
-h3 a {
-    color: #34495e;
 }
 
 
@@ -261,16 +270,19 @@ h2:before {
     -o-animation: avatar_turn_around 1s linear infinite;
     -ms-animation: avatar_turn_around 1s linear infinite;
     animation: avatar_turn_around 1s linear infinite;
-    font-size: 26px;
-    margin-left: -27px;
+    font-size: 25px;
+    margin-left: -29px;
 }
 
-/* h2标题内容稍稍偏左一点 */
+/* h2标题内容稍稍偏右一点 */
 h2 * {
-    margin-left: .3rem;
+    margin-left: .18rem;
 }
 #write>h2.md-focus:before {
     color: var(--focus-color);
+}
+#write>h2.md-focus {
+    border-bottom-color: var(--focus-color);
 }
 
 h3 {
@@ -297,6 +309,10 @@ h4 {
     height: auto;
     background-color: var(--focus-color);
     color: #ffffff;
+}
+#write>h3.md-focus,
+#write>h4.md-focus {
+    border-color: var(--focus-color);
 }
 
 #write h5::before,
@@ -490,29 +506,20 @@ table tr:hover {
 /** 代码块 **/
 
 
+#write .CodeMirror pre {
+    font-family: var(--code-font);
+    font-size: 0.95em;
+    padding-left: 12px;
+}
 .md-fences {
     background: var(--codeblockbg-color);
     border-radius: 3px;
     color: var(--codeblockfont-color);
-    padding: 6px 4px;
+    padding: 0 4px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    font-family: Courier, monospace, 'Courier New', 'Roboto Mono', 'Source Sans Pro', 'Microsoft YaHei';
-    /* font-size: 0.935em; */
+    line-height: 1.6em;
 }
-/*
-.md-fences { //zj原样式
-    border: 1px solid #7a7a7a;
-    -webkit-font-smoothing: initial;
-    margin: 2rem 0 !important;
-    padding: 3px 5px;
-    line-height: 1.55rem;
-    border-radius: 2px;
-    font-family: 'Roboto Mono', 'Source Sans Pro', 'Microsoft YaHei', '微软雅黑' !important;
-    font-size: 0.9rem;
-    word-wrap: normal;
-}
-*/
 
 /* 行号左框线 */
 /*
@@ -520,11 +527,6 @@ table tr:hover {
     border-right: 1px solid rgba(204, 51, 0);
 }
 */
-
-#write .CodeMirror-code pre {
-    padding-left: 12px;
-    line-height: 1.55rem;
-}
 
 /* 代码块行号颜色 */
 .cm-s-inner .CodeMirror-linenumber {
@@ -546,28 +548,23 @@ table tr:hover {
 */
 
 /* 修复行间公式在手机端屏幕宽度较小时公式极端缩小的问题，但是打印为pdf时仍要设为100%，否则有滚动条 */
-.MathJax_SVG_Display svg{
-    max-width: inherit !important;
+@media only screen and (max-width: 800px) {
+    .MathJax_SVG_Display svg{
+        max-width: inherit !important;
+    }
 }
 
 
 /** 行内代码 **/
 
 
-#write code,
-tt {
+#write code {
     padding: 2px 4px;
     border-radius: 2px;
-    font-family: 'Source Code Pro', Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
-    font-size: 0.92rem;
+    font-family: var(--code-font); /*font-family: '微软雅黑';*/
+    font-size: 0.9rem;
     color: var(--code-color);
     background-color: var(--codebg-color);
-    /* color: #c7254e;
-    background-color: #f9f2f4;  */
-}
-
-tt {
-    margin: 0 2px;
 }
 
 
@@ -683,7 +680,7 @@ hr { /* 来自next主题样式 */
     color: white;
     border: 1px solid var(--taskfocus-color);
     background-color: var(--taskfocus-color);
-    line-height: .9rem;
+    line-height: .8rem;
 }
 .md-task-list-item:before{
     content: none !important;
@@ -799,15 +796,15 @@ hr { /* 来自next主题样式 */
     -o-filter:none;
 }
 
-
-
 .md-image>.md-meta {
     border-radius: 3px;
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    font-family: var(--body-font);
     padding: 2px 0 0 4px;
     font-size: 0.9em;
     color: inherit;
 }
+
+
 
 .md-tag {
     color: inherit;
@@ -843,7 +840,7 @@ header,
 .context-menu,
 .megamenu-content,
 footer {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-family: var(--body-font);
 }
 
 .file-node-content:hover .file-node-icon,
@@ -885,17 +882,11 @@ footer {
         font-size: 16px!important;
     }
     body {
-        /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
-        /* font-size: 16px!important; */
         font-family: Times, 'SimSun', serif!important;
         color: #000000!important;
     }
     p {
         color: #000000!important;
-    }
-    a {
-        color: blue!important;
-        /* border-bottom: 1px solid blue!important; */
     }
     table,
     pre {
@@ -1144,7 +1135,7 @@ span[alt="modern"] {
     display: inline;
     padding: 5px 10px;
     border-radius: 20px;
-    font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+    font-family: var(--body-font);
     font-size: 1em;
     letter-spacing: .2em;
     color: red;
@@ -1185,7 +1176,7 @@ span[alt="btn"]:hover {
 
 @-webkit-keyframes uk-text-shadow-glitch{0%{text-shadow:none}25%{text-shadow:-1px -1px 0 #ff0048,1px 1px 0 #3234ff}50%{text-shadow:1px -1px 0 #ff0048,-1px 1px 0 #3234ff}75%{text-shadow:-1px 1px 0 #ff0048,1px -1px 0 #3234ff}to{text-shadow:1px 1px 0 #ff0048,-1px -1px 0 #3234ff}}@keyframes uk-text-shadow-glitch{0%{text-shadow:none}25%{text-shadow:-1px -1px 0 #ff0048,1px 1px 0 #3234ff}50%{text-shadow:1px -1px 0 #ff0048,-1px 1px 0 #3234ff}75%{text-shadow:-1px 1px 0 #ff0048,1px -1px 0 #3234ff}to{text-shadow:1px 1px 0 #ff0048,-1px -1px 0 #3234ff}}
 
-span[alt=shake] {
+span[alt="shake"] {
     -webkit-animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
     animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
 }

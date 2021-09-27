@@ -71,13 +71,15 @@ def decorator(func):
 
 注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
 
-<audio src="./temp/The Sound Of Silence.mp3"></audio>
+<audio controls="controls">
+  <source src="./temp/The Sound Of Silence.mp3" type="audio/mp3" />
+</audio>
 
 > 可以将`<audio>`音频包裹在`<center></center>`中居中显示
 
 插入网易云的外链播放器（`<iframe>`，可嵌入油管等平台视频）：
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381289&auto=0"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
 
 <video src="./temp/难破船.mp4"></video>
 
@@ -106,8 +108,6 @@ pie
 - [ ] 未完成任务2
 - [x] 已完成任务1
 - [x] 已完成任务2
-
-[跳转测试](#四级标题)
 
 > 本主题（typora-dyzj-theme）的很多样式来自Hexo的<span alt="btn"><a href="https://butterfly.js.org">butterfly</a></span>主题，再次表达感谢🙇‍♀️
 
