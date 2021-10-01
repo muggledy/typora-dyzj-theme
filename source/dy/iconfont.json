@@ -1,0 +1,44 @@
+{
+  "id": "2856604",
+  "name": "fans",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2630589",
+      "name": "ZHX_风车",
+      "font_class": "weibiaoti-",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "3874808",
+      "name": "风车",
+      "font_class": "fengche",
+      "unicode": "e736",
+      "unicode_decimal": 59190
+    },
+    {
+      "icon_id": "4741263",
+      "name": "风车",
+      "font_class": "fengche1",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7561685",
+      "name": "风车",
+      "font_class": "windmill",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "11813348",
+      "name": "风车",
+      "font_class": "fengche2",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

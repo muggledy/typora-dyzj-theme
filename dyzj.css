@@ -1,8 +1,9 @@
-@import './source/dy/css/all.min.css';
+@import './source/dy/iconfont.css';
 @import './source/zj/fonts.css';
 :root {
     /* dy color */
     --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
+    /*--primary-color: red;*/
     --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
     --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
     --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
@@ -122,13 +123,6 @@ body>*:last-child {
 }
 #write a[href*="muggledy"]:hover {
     background-color:red;
-}
-#write a[href*="muggledy"]:hover:before {
-    content:"(大麻瓜) ";
-    margin-left: -60px;
-    color: red;
-    font-family: "Font Awesome 5 Free";
-    font-size: 15px;
 }
 #write h2 a, #write h4 a, #write a[alt="null"]{
     border-bottom: none !important;
@@ -256,9 +250,10 @@ h2 {
     border-bottom: 2px solid var(--titlebefore-color);
 }
 h2::before {
-    content: '\f863' !important; /* 风车图标 */
+    content: '\e689' !important; /* 风车图标 */
     color: var(--titlebefore-color);
-    font-family: "Font Awesome 5 Free";
+    font-family: "iconfont";
+    font-size: 1.1em !important;
 }
 
 /* h2标题前缀旋转动画 */
@@ -440,7 +435,7 @@ blockquote>* {
 }
 blockquote::before {
     content: '\f05a';
-    font-family: "Font Awesome 5 Free";
+    font-family: "FontAwesome";
     color: var(--blockquoteicon-color);
     position: absolute;
     top: 50%;
@@ -582,20 +577,6 @@ table tr:hover {
     border-bottom: none;
     padding: 1px;
     background-color: inherit;
-}
-
-
-/** 流程图块 **/
-
-
-#write .md-diagram-panel {
-    position: relative;
-    margin: 24px auto;
-}
-
-#write .md-focus .md-diagram-panel {
-    border: 1px solid red;
-    border-radius: 4px;
 }
 
 
@@ -843,9 +824,15 @@ footer {
     font-family: var(--body-font);
 }
 
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state {
-    visibility: visible;
+.file-node-content:hover .file-node-icon {
+    color: var(--titlebefore-color);
+}
+.file-node-content:hover {
+    cursor: pointer;
+    color: var(--titlebefore-color) !important;
+}
+.outline-item:hover {
+    color: var(--titlebefore-color) !important;
 }
 /*
 .mac-seamless-mode #typora-sidebar {
