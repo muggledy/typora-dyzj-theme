@@ -244,8 +244,7 @@ h1:after { //一级大标题下划线（为固定长度）
 }
 */
 h2 {
-    margin: 2em auto 1.4em;
-    line-height: 1.4;
+    margin: 1.8em auto 1.2em;
     font-size: 1.8em;
     border-bottom: 2px solid var(--titlebefore-color);
 }
@@ -253,7 +252,6 @@ h2::before {
     content: '\e689' !important; /* 风车图标 */
     color: var(--titlebefore-color);
     font-family: "iconfont";
-    font-size: 1.1em !important;
 }
 
 /* h2标题前缀旋转动画 */
@@ -265,7 +263,7 @@ h2:before {
     -o-animation: avatar_turn_around 1s linear infinite;
     -ms-animation: avatar_turn_around 1s linear infinite;
     animation: avatar_turn_around 1s linear infinite;
-    font-size: 25px;
+    font-size: 34px;
     margin-left: -29px;
 }
 
@@ -440,7 +438,7 @@ blockquote::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: larger;
+    font-size: large;
     font-weight: 600;
 }
 /*
@@ -669,8 +667,7 @@ hr { /* 来自next主题样式 */
 
 #write input[type=checkbox] {
     position: absolute;
-    top: 60%;
-    transform: translateY(-60%);
+    top: 6px;
     left: -6px;
     background-color: inherit;
 }
@@ -897,7 +894,7 @@ footer {
 }
 #write ul>li:not(.tab):before, #write .ul>.li:not(.tab):before {
     margin-left: -22px;
-    margin-top: 9px;
+    margin-top: 10px;
     width: .62em;
     height: .62em;
     border: .1em solid var(--ulol-color); /* #81d8cf */
@@ -1058,13 +1055,13 @@ details[open]>summary {
 
 /* 折叠框、视频、音频标签点击时候会出现黑色边框，极不美观，去除 */
 summary:focus {
-	outline: none !important;
+    outline: none !important;
 }
 video:focus{
-	outline: none !important;
+    outline: none !important;
 }
 audio:focus{
-	outline: none !important;
+    outline: none !important;
 }
 
 
@@ -1094,14 +1091,14 @@ span[alt="hide"]:hover {
 
 
 @-webkit-keyframes rainbowan {
-	to {
-		background-position: -2000vw;
-	}
+    to {
+        background-position: -2000vw;
+    }
 }
 @keyframes rainbowan {
-	to {
-		background-position: -2000vw;
-	}
+    to {
+        background-position: -2000vw;
+    }
 }
 span[alt="rainbow"], span[alt="rainbow"] * {
     padding-top: 3px;
