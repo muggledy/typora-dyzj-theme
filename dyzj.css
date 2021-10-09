@@ -1,4 +1,4 @@
-@import './source/dy/iconfont.css';
+@import './source/dy/iconfont.min.css';
 @import './source/zj/fonts.css';
 :root {
     /* dy color */
@@ -434,8 +434,8 @@ blockquote>* {
     margin-left: 2rem !important;
 }
 blockquote::before {
-    content: '\f05a';
-    font-family: "FontAwesome";
+    content: '\e613';
+    font-family: "iconfont";
     color: var(--blockquoteicon-color);
     position: absolute;
     top: 50%;

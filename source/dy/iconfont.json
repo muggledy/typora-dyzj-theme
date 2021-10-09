@@ -6,32 +6,60 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "400822",
+      "name": "info2",
+      "font_class": "info2",
+      "unicode": "e746",
+      "unicode_decimal": 59206
+    },
+    {
+      "icon_id": "585994",
+      "name": "info",
+      "font_class": "093info",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "1084598",
+      "name": "institue_info",
+      "font_class": "institueinfo",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "3418906",
+      "name": "风扇",
+      "font_class": "fengshan",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13640193",
+      "name": "风扇",
+      "font_class": "fengshan1",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "22898788",
+      "name": "2.8通风风扇",
+      "font_class": "a-28tongfengfengshan",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "22898796",
+      "name": "2.8a通风风扇",
+      "font_class": "a-28atongfengfengshan",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
       "icon_id": "2630589",
       "name": "ZHX_风车",
       "font_class": "weibiaoti-",
       "unicode": "e689",
       "unicode_decimal": 59017
-    },
-    {
-      "icon_id": "3874808",
-      "name": "风车",
-      "font_class": "fengche",
-      "unicode": "e736",
-      "unicode_decimal": 59190
-    },
-    {
-      "icon_id": "4741263",
-      "name": "风车",
-      "font_class": "fengche1",
-      "unicode": "e610",
-      "unicode_decimal": 58896
-    },
-    {
-      "icon_id": "7561685",
-      "name": "风车",
-      "font_class": "windmill",
-      "unicode": "e671",
-      "unicode_decimal": 58993
     },
     {
       "icon_id": "11813348",
