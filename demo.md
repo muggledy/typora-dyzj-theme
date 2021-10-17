@@ -37,7 +37,7 @@ $$
 1. 有序列表1[^1]
 2. 有序列表2
 
-==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（小康）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、绿色）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。<span alt="hide">隐藏文本</span>
+==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（小康）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、绿色）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。其他：<span alt="hide">隐藏文本</span>，<span alt="hollow">空心字</span>，<span alt="blink">字体闪烁</span>
 
 <span alt="rainbow">彩虹变换字体特效</span>（嫖自[黑石大佬](https://www.heson10.com/posts/21347.html)🙇‍♀️），<span alt="modern">欢迎光临</span>（嫖自[QinXS](https://7bxing.com/friends/)🙇‍♀️），<span alt="shake">抖音字效</span>（嫖自[NyKee](https://www.nykee.cn/)🙇‍♀️）
 
@@ -70,7 +70,7 @@ def decorator(func):
 
 <img src="./temp/demo.jpg" style="zoom: 67%;" alt="shadow-可惜不能显示图释" />
 
-注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
+注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果，设为`alt="gray-随便写"`时图片默认为暗灰色。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
 
 <audio controls="controls">
   <source src="./temp/The Sound Of Silence.mp3" type="audio/mp3" />
@@ -88,7 +88,6 @@ def decorator(func):
     <summary>折叠标签</summary>
     青青子衿，悠悠我心
 </details>
-
 > 关于Typora对HTML的支持说明：<https://support.typora.io/HTML/>
 
 [Emoji表情符号](https://www.webfx.com/tools/emoji-cheat-sheet/)：:smile:（`:smile:`），Decimal NCRs或Hexadecimal NCRs^[2]^编码也是受支持的，譬如“笑哭”：&#128514;（`&#128514;`）或&#x1F602;（`&#x1F602;`）

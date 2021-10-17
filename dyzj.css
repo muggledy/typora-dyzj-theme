@@ -7,13 +7,14 @@
     --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
     --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
     --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
+    --codeblockline-color: #e0f8f8; /*代码块选中行颜色*/
     --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
     --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色（蓝色） */
     --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
     --blockquotebg-color: #f4fcff; /* blockquote背景色（淡蓝） */
     --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
     --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */
-    --tablefocusrow-color: rgba(100, 221, 221, 0.2); /* 表格鼠标悬停行颜色（淡蓝） */
+    --tablefocusrow-color: #e0f8f8; /* 表格鼠标悬停行颜色（淡蓝） */
     --tableborder-color: #c5c5c5; /* 表格边框色（黑色） */
     --tablethbg-color: #f4fcff; /* 表格表头背景色（淡蓝） */
     --toc-color: #00a0a0; /* 目录颜色（绿色） */
@@ -64,6 +65,19 @@ body {
     margin: 0 auto;
     padding: 20px 30px 160px;
 }
+
+
+/* 人物背景图片（右下角显示） */
+
+
+@media only screen and (min-width: 1800px){
+    content {
+        background: url(./source/bg.gif) no-repeat;
+        background-size : 12%;
+        background-position: 85% 100%;
+    }
+}
+
 
 /*
 @media only screen and (min-width: 1400px) {
@@ -508,7 +522,6 @@ table tr:hover {
     background: var(--codeblockbg-color);
     border-radius: 3px;
     color: var(--codeblockfont-color);
-    padding: 0 4px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     line-height: 1.6em;
@@ -530,6 +543,18 @@ table tr:hover {
 /* 代码块光标线条宽度、颜色 */
 #write .CodeMirror-cursors .CodeMirror-cursor {
     border-left: 2px solid var(--focus-color);
+}
+
+/* 选中行高亮 */
+.md-fences:not(.md-focus) .CodeMirror-code>div:hover {
+    background-color: var(--codeblockline-color);
+}
+.md-fences.md-focus .CodeMirror-code>div.CodeMirror-activeline {
+    background-color: var(--codeblockline-color);
+}
+
+#write ol>li>*[class~="md-fences"], #write ul>li>*[class~="md-fences"] {
+    padding-left: 0 !important;
 }
 
 /* 蓝色行内数学公式 */
@@ -736,6 +761,20 @@ hr { /* 来自next主题样式 */
     top: .285714286rem;
 }
 
+/* https://www.bnxb.com/divcss/27022.html */
+details pre {
+    color:#444;
+    margin:15px auto;
+    padding:20px 15px;
+    padding-bottom: 0px;
+    background:#fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAmCAIAAACphTeFAAAAJElEQVRIx2N4RS5gGNU5qnNU56hOZJ2fyQWjOkd1juoc1YkMAKDL4lkok3p7AAAAAElFTkSuQmCC') repeat;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    letter-spacing:1.5px;
+    font:14px/25px 'Comic Sans MS','courier new';
+    line-height:22px;
+    background-size:100% 44px;
+}
 
 
 /** 图片 **/
@@ -772,6 +811,15 @@ hr { /* 来自next主题样式 */
     -moz-filter:none;
     -ms-filter:none;
     -o-filter:none;
+}
+
+/*图片暗灰*/
+.md-image img[alt|='gray'] {
+    filter:grayscale(100%);
+}
+.md-image img[alt|='gray']:hover {
+    transition: 0.5s linear;
+    filter:grayscale(0);
 }
 
 .md-image>.md-meta {
@@ -1163,4 +1211,47 @@ span[alt="btn"]:hover {
 span[alt="shake"] {
     -webkit-animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
     animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
+}
+
+
+/*https://www.jq22.com/webqd4214*/
+span[alt="glow"] {
+	font-family:'Audiowide';
+	text-align:center;
+	color:black;
+	-webkit-transition:all 1.5s ease;
+	transition:all 1.5s ease;
+}
+span[alt="glow"]:hover {
+	-webkit-animation:Glow 1.5s ease infinite alternate;
+	animation:Glow 1.5s ease infinite alternate;
+}
+@-webkit-keyframes Glow {
+	from {
+	text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #00a67c,0 0 70px #00a67c,0 0 80px #00a67c,0 0 100px #00a67c,0 0 150px #00a67c;
+}
+to {
+	text-shadow:0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #00a67c,0 0 35px #00a67c,0 0 40px #00a67c,0 0 50px #00a67c,0 0 75px #00a67c;
+}
+}@keyframes Glow {
+	from {
+	text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #00a67c,0 0 70px #00a67c,0 0 80px #00a67c,0 0 100px #00a67c,0 0 150px #00a67c;
+}
+to {
+	text-shadow:0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #00a67c,0 0 35px #00a67c,0 0 40px #00a67c,0 0 50px #00a67c,0 0 75px #00a67c;
+}
+}
+
+
+/* 空心字等文字特效 https://www.cnblogs.com/xiaohuochai/p/7521282.html */
+
+
+span[alt="hollow"]{
+    color:white;
+    text-shadow:1px 1px black,-1px -1px black,1px -1px black,-1px 1px black;
+}
+
+@keyframes blink-smooth{50%{color:transparent;}}
+span[alt="blink"]{
+  animation:.5s blink-smooth infinite alternate linear;
 }

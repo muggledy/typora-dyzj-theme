@@ -1,7 +1,7 @@
 # typora-dyzj-theme
 
 <p><a href="https://github.com/muggledy/typora-dyzj-theme/releases/latest" alt="null">
-  <img src="https://img.shields.io/github/release/muggledy/typora-dyzj-theme.svg"/>&nbsp;
+  <img src="https://img.shields.io/github/commit-activity/m/muggledy/typora-dyzj-theme.svg"/>&nbsp;
   <img src="https://img.shields.io/github/downloads/muggledy/typora-dyzj-theme/total.svg"/>
 </a></p>
 
