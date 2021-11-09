@@ -64,13 +64,21 @@ def decorator(func):
 
 [跳转](#二级标题)至指定标题（锚点），也可以在任意位置通过`<a name="锚点名" alt="none"> </a>`（为了方便编辑，typora会显示空标签或`style="display:none"`的标签，但填充一个空格就可以被隐藏，在导出为HTML文件时，由于该款超链接样式有一个padding宽度，所以空链接还是会显示下划线，`alt="none"`用于避免该问题，如果自定义的锚点有文字说明，则不要使用`alt="none"`）设定锚点，示例：[求点个赞呗](#star)
 
+<a href="#" alt="null">无样式链接</a>，主要用于图片超链接，如：<a href="#" alt="null"><img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github"><img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"></a>
+
 上下标：X^2^, H~2~o，下标如果是多个单词或字符并以空格分隔，需要对空格进行转义，即在空格前面加`\`，譬如`X~下标1\ 下标2~`（X~下标1\ 下标2~）。要显示\*特殊字符等，也是通过反斜杠转义
 
 <ruby>Base<rp> (</rp><rt>top</rt><rp>) </rp></ruby>、<ruby>佐天泪子<rp> (</rp><rt>xiān qún kuáng mó</rt><rp>) </rp></ruby>、<ruby>超電磁砲<rp> (</rp><rt>レールガン</rt><rp>) </rp></ruby>
 
-<img src="./temp/demo.jpg" style="zoom: 67%;" alt="shadow-可惜不能显示图释" />
+<img src="./temp/demo.jpg" style="zoom: 67%;" alt="shadow-可惜默认不支持图释" />
 
 注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果，设为`alt="gray-随便写"`时图片默认为暗灰色。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
+
+目前会对图片自动编号，但要正确显示图释（`alt`属性值），还需额外修改<u>frame.js</u>源码（在安装路径*Typora/resources/app/app/window/*下），分别定位到`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image"+L+"' data-src='"+F+"' "+b+">`以及`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image md-img-loaded"+w+"' "+b+">`处，将两处末尾的`">`都替换为以下字符串即可：
+
+```js
+" alt='"+ (k.getAttribute("alt") ? ". "+(/^(shadow-|blur-|gray-)?(.*)$/.exec(k.getAttribute("alt"))[2]) : "") +"'>
+```
 
 <audio controls="controls">
   <source src="./temp/The Sound Of Silence.mp3" type="audio/mp3" />

@@ -147,7 +147,7 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
 }
 
 /* 修复空链接（标题锚点）显示底部下划线的问题（padding宽度引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，这将会使得链接“消失” */
-#write a:empty, #write a[alt="none"] {
+#write a:empty, #write a[alt="none"], #write a[alt="null"] {
     padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
     padding-right:0px;
 }
@@ -290,6 +290,10 @@ h2 * {
 }
 #write>h2.md-focus {
     border-bottom-color: var(--focus-color);
+}
+
+.about-content-description h2:before{
+    content: none !important;
 }
 
 h3 {
@@ -546,7 +550,7 @@ table tr:hover {
 }
 
 /* 选中行高亮 */
-.md-fences:not(.md-focus) .CodeMirror-code>div:hover {
+.md-fences:not(.md-focus) .CodeMirror-code>*:hover {
     background-color: var(--codeblockline-color);
 }
 .md-fences.md-focus .CodeMirror-code>div.CodeMirror-activeline {
@@ -630,13 +634,23 @@ hr {
     box-sizing: content-box;
 }
 */
-hr { /* 来自next主题样式 */
+/* 来自next主题样式 */
+/*
+hr {
     background-image: repeating-linear-gradient(-45deg, var(--split-color), var(--split-color) 4px, transparent 4px, transparent 8px);
     border: 0;
     height: 3px;
     margin: 40px 0
 }
-
+*/
+/* 透明渐变水平线 */
+hr {
+ width:80%;
+ margin:0 auto;
+ border: 0;
+ height: 2px;
+ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--split-color), rgba(0, 0, 0, 0));
+}
 
 
 #write del {
@@ -781,7 +795,7 @@ details pre {
 
 
 .md-image {
-    margin: 24px auto; /* 图片上下边距24像素 */
+    margin: 15px auto 5px;
 }
 .md-image img {
     border-radius: 4px;
@@ -830,6 +844,19 @@ details pre {
     color: inherit;
 }
 
+/* 图片自动编号 */
+#write{
+    counter-reset: imgNum;
+}
+#write p>.md-image:after{
+    counter-increment: imgNum;
+    content: "图" counter(imgNum) attr(alt) !important;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 8px !important;
+    font-size: small;
+}
 
 
 .md-tag {

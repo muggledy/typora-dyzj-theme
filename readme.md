@@ -1,7 +1,8 @@
 # typora-dyzj-theme
 
 <p><a href="https://github.com/muggledy/typora-dyzj-theme/releases/latest" alt="null">
-  <img src="https://img.shields.io/github/commit-activity/m/muggledy/typora-dyzj-theme.svg"/>&nbsp;
+  <img src="https://img.shields.io/badge/Typora-v0.9.98-green?style=flat&logo=data:image/jpeg;base64,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">
+  <img src="https://img.shields.io/github/v/release/muggledy/typora-dyzj-theme"/>
   <img src="https://img.shields.io/github/downloads/muggledy/typora-dyzj-theme/total.svg"/>
 </a></p>
 
@@ -59,7 +60,7 @@
 
 ## 样式预览
 
-![](./temp/bee.png)
+![主题截图](./temp/bee.png)
 
 你可以在下载的“demo.md”中查阅以上内容，或者前往<a href="https://typora-dyzj-theme.vercel.app/">地址</a>在线预览
 
