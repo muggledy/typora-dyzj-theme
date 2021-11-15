@@ -39,6 +39,8 @@
     --detailsborder-color: #00c4b6; /* 折叠框边框色（绿色） */
     --body-color: #000000; /* 文本颜色 */
     --para-color: #000000; /* 段落文本颜色（黑色） */
+    --commonstr-color: #232629; /* 常规字符串颜色（黑色） */
+    --commonstrbg-color: #e3e6e8; /* 常规字符串背景色（灰色） */
     /* dy font */
     --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
@@ -475,6 +477,7 @@ blockquote:hover:before {
 table {
     padding: 0;
     word-break: initial;
+    font-size:12pt;
 }
 /*
 table tr {
@@ -511,6 +514,52 @@ table tr td:last-child {
 }
 table tr:hover {
   background-color: var(--tablefocusrow-color);
+}
+
+/* 三线表（自定义需覆盖上述默认表格样式） */
+div[alt="three-table"] table {
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-size:11pt;
+}
+div[alt="three-table"] table tr td, div[alt="three-table"] table tr th {
+    border: none;
+}
+div[alt="three-table"] table tr, div[alt="three-table"] table tr th, div[alt="three-table"] table tr:hover {
+    background-color: white;
+}
+div[alt="three-table"] table tr th {
+    border-bottom: 0.75pt solid;
+    font-family:黑体;
+    font-size:11pt;
+}
+
+/* 控制文本的居中or左or右显示 */
+*[alt="center"]{
+    text-align: center;
+}
+*[alt="left"]{
+    text-align: left;
+}
+*[alt="right"]{
+    text-align: right;
+}
+
+/* 无表头表格（且调小了格子的padding值） */
+div[alt="notitle-table"] table {
+    font-size: 11pt;
+}
+div[alt="notitle-table"] table tr, div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr:hover {
+    background-color: white;
+}
+div[alt="notitle-table"] table tr td:hover, div[alt="notitle-table"] table tr th:hover {
+    background-color: var(--tablefocusrow-color);
+}
+div[alt="notitle-table"] table tr th {
+    font-weight: normal;
+}
+div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr td {
+    padding: 0px 8px;
 }
 
 
@@ -858,6 +907,11 @@ details pre {
     font-size: small;
 }
 
+div[alt="fig"]{
+    font-size: small;
+    text-align: center;
+    margin-top: -10px !important;
+}
 
 .md-tag {
     color: inherit;
@@ -1281,4 +1335,13 @@ span[alt="hollow"]{
 @keyframes blink-smooth{50%{color:transparent;}}
 span[alt="blink"]{
   animation:.5s blink-smooth infinite alternate linear;
+}
+
+span[alt="str"]{
+    padding: 2px 4px;
+    color: var(--commonstr-color);
+    background-color: var(--commonstrbg-color);
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: var(--body-font);
 }
