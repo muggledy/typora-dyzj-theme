@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/github/downloads/muggledy/typora-dyzj-theme/total.svg"/>
 </a></p>
 
-> 最开始下载了[My-Typora-Themes](https://github.com/Theigrams/My-Typora-Themes)主题样式，之后在使用过程中不断修改（主要保留了其经典的标题样式、图片阴影样式、任务列表样式），得到目前的自用款式，主要新增了有序/无序列表样式、超链接样式、提示块样式以及一些文本样式等
+> 最开始下载了[My-Typora-Themes](https://github.com/Theigrams/My-Typora-Themes)主题样式，之后在使用过程中不断修改（主要保留了其经典的标题样式、图片阴影样式、任务列表样式），得到目前的自用款式，主要新增了有序/无序列表样式、超链接样式、提示块样式以及一些文本样式等。相关样式来源参见致谢名单
 
 ## 使用指南
 
@@ -64,4 +64,4 @@
 
 你可以在下载的“demo.md”中查阅以上内容，或者前往<a href="https://typora-dyzj-theme.vercel.app/">地址</a>在线预览
 
-<font>致谢</font>：[zj主题作者](https://github.com/Theigrams/My-Typora-Themes)、[butterfly主题](https://github.com/jerryc127/hexo-theme-butterfly)
+<font>致谢</font>：[zj主题作者](https://github.com/Theigrams/My-Typora-Themes)、[butterfly主题](https://github.com/jerryc127/hexo-theme-butterfly)、[volantis主题](https://volantis.js.org/)

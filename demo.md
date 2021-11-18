@@ -37,7 +37,7 @@ $$
 1. 有序列表1[^1]
 2. 有序列表2
 
-==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（小康）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、绿色）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。其他：<span alt="hide">隐藏文本</span>，<span alt="hollow">空心字</span>，<span alt="blink">字体闪烁</span>
+==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（[小康](https://www.antmoe.com/posts/3b43914f/)）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、绿色）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。其他：<span alt="hide">隐藏文本</span>，<span alt="hollow">空心字</span>，<span alt="blink">字体闪烁</span>
 
 <span alt="rainbow">彩虹变换字体特效</span>（嫖自[黑石大佬](https://www.heson10.com/posts/21347.html)🙇‍♀️），<span alt="modern">欢迎光临</span>（嫖自[QinXS](https://7bxing.com/friends/)🙇‍♀️），<span alt="shake">抖音字效</span>（嫖自[NyKee](https://www.nykee.cn/)🙇‍♀️）
 
@@ -98,7 +98,7 @@ def decorator(func):
 
 注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果，设为`alt="gray-随便写"`时图片默认为暗灰色。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
 
-目前会对图片自动编号，但要正确显示图释（`alt`属性值），还需额外修改<u>frame.js</u>源码（在安装路径<span alt="str">Typora/resources/app/app/window/</span>下），分别定位到`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image"+L+"' data-src='"+F+"' "+b+">`以及`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image md-img-loaded"+w+"' "+b+">`处，将两处末尾的`">`都替换为以下字符串即可：
+目前会对图片自动编号，但要正确显示图释（`alt`属性值），还需额外修改<u>frame.js</u>源码（在安装路径<span alt="str">Typora/resources/app/app/window/</span>下），分别定位到`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image"+L+"' data-src='"+F+"' "+b+">`以及`h="<span md-inline='"+v+"'"+S+" contenteditable='false' class='md-image md-img-loaded"+w+"' "+b+">`处（注意Typora版本不同，相关代码可能有所区别），将两处末尾的`">`都替换为以下字符串即可：
 
 ```js
 " alt='"+ (k.getAttribute("alt") ? ". "+(/^(shadow-|blur-|gray-)?(.*)$/.exec(k.getAttribute("alt"))[2]) : "") +"'>
@@ -150,6 +150,24 @@ pie
 
 [在线编辑地址](https://app.diagrams.net/?src=about#G1XbVy9iD3kEJMiCqG2IceUlNBIzMbcJYS)，该图表由[drawio](https://www.diagrams.net/)提供支持（提供iframe嵌入代码和svg嵌入代码），还支持UML类图、Network网络拓扑图、Flowcharts流程图、Tables表格等众多图表类型
 
+时间轴（Volantis）：
+
+<div alt="timeline">
+    <div alt="timenode">
+        <div alt="meta">2019.9 ~ 2022.6 <a href="#">家里蹲B</a></div>
+        <div alt="body">
+            人言落日是天涯，望极天涯不见家。
+            已恨碧山相阻隔，碧山还被暮云遮。
+        </div>
+    </div>
+    <div alt="timenode">
+        <div alt="meta">2015.9 ~ 2019.6 <a href="#">家里蹲A</a></div>
+        <div alt="body">
+            看花开花落，谈笑风生...
+        </div>
+    </div>
+</div>
+
 任务列表：
 
 - [ ] 未完成任务1
@@ -157,7 +175,7 @@ pie
 - [x] 已完成任务1
 - [x] 已完成任务2
 
-> 本主题（typora-dyzj-theme）的很多样式来自Hexo的<span alt="btn"><a href="https://butterfly.js.org">butterfly</a></span>主题，再次表达感谢🙇‍♀️
+> 本主题（typora-dyzj-theme）的很多样式来自Hexo的<span alt="btn"><a href="https://butterfly.js.org">butterfly</a></span>及<span alt="btn"><a href="https://volantis.js.org/">Volantis</a></span>主题，再次表达感谢🙇‍♀️
 
 ---
 
