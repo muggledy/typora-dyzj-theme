@@ -14,7 +14,7 @@
 
 标题样式来自[zj主题][1]^[1]^（这是一个参考链接，按住<kbd>ctrl</kbd>键并点击将自动打开浏览器并跳转至相关链接，其中上标`[1]`只是一个额外的标注）
 
-注：部分样式需要在偏好设置中开启，如上下标、行内公式、图表等
+注：部分样式需要在偏好设置中开启，如上下标、行内公式、图表等。Markdown写法参考说明文档<sup><a href="https://support.typora.io/Markdown-Reference" alt="ref">🚀</a></sup>，试用其他如印象等在线Markdown编辑器<span alt="ref">[[Ref 1](https://www.zybuluo.com/mdeditor),[Ref 2](https://maxiang.io/),[Ref 3](https://editoe.com/)]</span>
 
 行内公式：$\lim\limits_{x \to \infty} \exp(-x)=0$，行间公式：
 $$
@@ -37,7 +37,7 @@ $$
 1. 有序列表1[^1]
 2. 有序列表2
 
-==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（[小康](https://www.antmoe.com/posts/3b43914f/)）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、绿色）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。其他：<span alt="hide">隐藏文本</span>，<span alt="hollow">空心字</span>，<span alt="blink">字体闪烁</span>
+==文本高亮==，__加粗__，*斜体*，==***斜体高亮加粗***==，~~删除线~~，<u>下划线</u>。`<font>`标签被我用于一款小标签样式（[小康](https://www.antmoe.com/posts/3b43914f/)）：<font>红色小标签</font>，可以通过设置`background-color`属性控制背景色，如：<font style="background-color:#8bc34a">绿色小标签</font>，为了方便，我提供了五种预定义的颜色（包括前面的红色、<span alt="glow">绿色</span>）：<font title="blue">蓝色小标签</font>、<font title="yellow">黄色小标签</font>、<font title="gray">灰色小标签</font>。一些强调型格式：<span alt="underline">下划线</span>、<span alt="emp">着重号</span>、<span alt="wavy">波浪线</span>。其他：<span alt="hide">隐藏文本</span>，<span alt="hollow">空心字</span>，<span alt="blink">字体闪烁</span>
 
 <span alt="rainbow">彩虹变换字体特效</span>（嫖自[黑石大佬](https://www.heson10.com/posts/21347.html)🙇‍♀️），<span alt="modern">欢迎光临</span>（嫖自[QinXS](https://7bxing.com/friends/)🙇‍♀️），<span alt="shake">抖音字效</span>（嫖自[NyKee](https://www.nykee.cn/)🙇‍♀️）
 
@@ -83,12 +83,11 @@ def decorator(func):
   </tr>
 </table>
 </div>
-
 <div alt="fig">表1.&nbsp;&nbsp;&nbsp;&nbsp;三线表</div>
 
 [跳转](#二级标题)至指定标题（锚点），也可以在任意位置通过`<a name="锚点名" alt="none"> </a>`（为了方便编辑，typora会显示空标签或`style="display:none"`的标签，但填充一个空格就可以被隐藏，在导出为HTML文件时，由于该款超链接样式有一个padding宽度，所以空链接还是会显示下划线，`alt="none"`用于避免该问题，如果自定义的锚点有文字说明，则不要使用`alt="none"`）设定锚点，示例：[求点个赞呗](#star)
 
-<a href="#" alt="null">无样式链接</a>，主要用于图片超链接，如：<a href="#" alt="null"><img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github"><img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"></a>
+<a href="#" alt="null">无样式链接</a>，主要用于图片超链接等，如：<a href="#" alt="null"><img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github"><img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"></a>
 
 上下标：X^2^, H~2~o，下标如果是多个单词或字符并以空格分隔，需要对空格进行转义，即在空格前面加`\`，譬如`X~下标1\ 下标2~`（X~下标1\ 下标2~）。要显示\*特殊字符等，也是通过反斜杠转义
 
@@ -124,7 +123,7 @@ def decorator(func):
 </details>
 > 关于Typora对HTML的支持说明：<https://support.typora.io/HTML/>
 
-[Emoji表情符号](https://www.webfx.com/tools/emoji-cheat-sheet/)：:smile:（`:smile:`），Decimal NCRs或Hexadecimal NCRs^[2]^编码也是受支持的，譬如“笑哭”：&#128514;（`&#128514;`）或&#x1F602;（`&#x1F602;`）
+[Emoji表情符号](https://www.webfx.com/tools/emoji-cheat-sheet/)：:smile:（`:smile:`），Decimal NCRs或Hexadecimal NCRs^[2]^编码也是受支持的，譬如“&#31505;&#21741;”：&#128514;（`&#128514;`）或&#x1F602;（`&#x1F602;`）
 
 ```mermaid
 pie
@@ -186,5 +185,5 @@ pie
 [^1]: 该样式来自[Butterfly主题](https://butterfly.js.org)（这是一个脚注）
 
 [1]: https://github.com/Theigrams/My-Typora-Themes	"本样式修改自zj主题（这是一个链接引用）"
-[2]:https://www.ifreesite.com/unicode/
-[官方文档]: https://support.typora.io/Draw-Diagrams-With-Markdown/
+[2]:https://www.ifreesite.com/unicode/	"Unicode图标编码在线转换"
+[官方文档]: https://support.typora.io/Draw-Diagrams-With-Markdown/	"Typora流程图绘制说明"

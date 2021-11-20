@@ -7,7 +7,7 @@
     --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
     --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
     --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
-    --codeblockline-color: #e0f8f8; /*代码块选中行颜色*/
+    --codeblockline-color: #e0f8f8; /* 代码块选中行颜色 */
     --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
     --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色（蓝色） */
     --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
@@ -42,7 +42,7 @@
     --commonstr-color: #232629; /* 常规字符串颜色（黑色） */
     --commonstrbg-color: #e3e6e8; /* 常规字符串背景色（灰色） */
     /* dy font */
-    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体（"Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;） */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
 
@@ -60,6 +60,8 @@ body {
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
+    text-align: justify;
+    text-justify: inter-ideograph;
 }
 
 #write {
@@ -78,8 +80,33 @@ body {
         background-size : 12%;
         background-position: 85% 100%;
     }
+    /*效仿https://github.com/Soanguy/typora-theme-autumnus，取消下面注释，并注释上面（content）即可，换个背景（透明）风格*/
+    /*content {
+        background: url(./source/bg.gif) no-repeat;
+        background-size : 30%;
+        background-position: center 10%;
+    }
+    #write {
+        backdrop-filter: blur(15px);
+        max-width: 950px;
+        padding: 50px;
+        border: 1px dashed #d0d5d7;
+        border-radius: 4px;
+        margin: 470px auto 20px;
+    }
+    #write *:not(font,span) {
+        background: transparent !important;
+    }
+    #write table *, #write blockquote, #write pre, #write details, #write details * {
+        background: transparent !important;
+    }
+    #write details, #write details summary {
+        border-color: #d0d5d7 !important;
+    }*/
 }
-
+content #md-searchpanel {
+    background: white;
+}
 
 /*
 @media only screen and (min-width: 1400px) {
@@ -131,7 +158,7 @@ body>*:last-child {
     border-radius:6px;
     border-bottom:2px solid transparent;
     background-color:var(--abottom-color);
-    color:#ffffffe6;
+    color:#ffffffe6 !important;
     cursor:pointer;
 }
 #write a[href*="muggledy"] {
@@ -140,7 +167,7 @@ body>*:last-child {
 #write a[href*="muggledy"]:hover {
     background-color:red;
 }
-#write h2 a, #write h4 a, #write a[alt="null"]{
+#write h2 a, #write h4 a, #write a[alt="null"], #write a[alt="ref"]{
     border-bottom: none !important;
     /*color: var(--code-color);*/
 }
@@ -161,7 +188,23 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
 #write a[alt="null"]:hover{
     background-color: inherit;
     border-radius: 0px;
-    color: var(--atext-color);
+    color: var(--atext-color) !important;
+}
+
+/* 样式：<超链接> */
+#write a[alt="ref"]:before{
+    content: "<";
+}
+#write a[alt="ref"]:after{
+    content: ">";
+}
+
+/* 写法：<span alt="ref">[[1][],[2][]]</span> */
+#write span[alt="ref"] a{
+    border-bottom: none;
+    color: var(--abottom-color);
+    /*padding-left: 2px;
+    padding-right: 2px;*/
 }
 
 
@@ -581,6 +624,7 @@ div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr td {
     overflow-wrap: break-word;
     word-wrap: break-word;
     line-height: 1.6em;
+    border: 1px solid #d0d5d7;
 }
 
 /* 行号左框线 */
@@ -626,6 +670,18 @@ div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr td {
     .MathJax_SVG_Display svg{
         max-width: inherit !important;
     }
+}
+
+/* 头部YAML格式 */
+pre.md-meta-block {
+    font-family: "Poppins";
+    color: #585858;
+    padding: 15px;
+    background: inherit;
+    /*border: 1px grey dashed !important;*/
+    font-size: 0.8rem;
+    line-height: 1.45;
+    border-radius: 5px;
 }
 
 
@@ -776,7 +832,7 @@ hr {
 
 
 .md-diagram-panel svg{
-    max-width: inherit !important;
+    /*max-width: inherit !important;*/
     height: inherit !important;
 }
 
@@ -1295,7 +1351,7 @@ span[alt="btn"]:hover {
     border: 1px solid var(--focus-color);
 }
 #write span[alt="btn"]:hover a{
-    color: var(--focus-color);
+    color: var(--focus-color) !important;
 }
 
 
@@ -1310,7 +1366,7 @@ span[alt="shake"] {
 }
 
 
-/*https://www.jq22.com/webqd4214*/
+/* https://www.jq22.com/webqd4214（爱是一道光，绿到你发慌） */
 span[alt="glow"] {
 	font-family:'Audiowide';
 	text-align:center;
@@ -1319,6 +1375,7 @@ span[alt="glow"] {
 	transition:all 1.5s ease;
 }
 span[alt="glow"]:hover {
+    color:#00a67c;
 	-webkit-animation:Glow 1.5s ease infinite alternate;
 	animation:Glow 1.5s ease infinite alternate;
 }
@@ -1449,4 +1506,19 @@ div[alt="timenode"]:hover div[alt="meta"]:after{
     -o-transform:scale(1);
     -ms-transform:scale(1);
     transform:scale(1);
+}
+
+
+/* 参考链接样式修改（隐藏链接部分，只显示标题） */
+
+
+.footnotes.md-def-link .md-def-split, .footnotes .md-def-url {
+    display: none;
+}
+.footnotes.md-def-link .md-def-name, .footnotes .md-def-title {
+    display: inline;
+}
+.footnotes {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
