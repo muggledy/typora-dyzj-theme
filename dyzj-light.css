@@ -1,0 +1,55 @@
+@import url(./source/dyzj.css);
+
+:root {
+    /* dy color */
+    --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
+    /*--primary-color: red;*/
+    --bg-color: white; /* 整体背景色（白色） */
+    --sidebarbg-color: white; /* 侧边栏背景色（白色） */
+    --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
+    --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
+    --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
+    --codeblockline-color: #e0f8f8; /* 代码块选中行颜色（青色） */
+    --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
+    --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色（蓝色） */
+    --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
+    --blockquotebg-color: #f4fcff; /* blockquote背景色（淡蓝） */
+    --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
+    --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */
+    --tablefocusrow-color: #e0f8f8; /* 表格鼠标悬停行颜色（淡蓝） */
+    --tableborder-color: #c5c5c5; /* 表格边框色（黑色） */
+    --tablethbg-color: #f4fcff; /* 表格表头背景色（淡蓝） */
+    --scrollbar-color: #9e9e9e; /* 滚动条颜色（灰色） */
+    --toc-color: #00a0a0; /* 目录颜色（绿色） */
+    --atext-color: black; /* 超链接文本颜色（黑色） */
+    --ahover-color: #ffffffe6; /* 超链接悬停文本颜色（白色） */
+    --abottom-color: #81d8cf; /* 超链接下划线颜色（青色） */
+    --code-color: #ff3502; /* 行内代码前景色（红色） */
+    --codebg-color: #f8f5ec; /* 行内代码背景色（淡红） */
+    --footnote-color: #e96900; /* 脚注上标前景色（红色） */
+    --footnotebg-color: #f8f8f8; /* 脚注上标背景色（淡灰） */
+    --highlight-color: red; /* 高亮文本前景色（红色） */
+    --highlightbg-color: yellow; /* 高亮文本背景色（黄色） */
+    --split-color: #00c4b6; /* 分割线颜色（绿色） */
+    --taskborder-color: red; /* 任务列表边框色（红色） */
+    --taskfocus-color: #00c4b6; /* 任务列表选中填充色（绿色） */
+    --spannote-color: #e91e64; /* 小标签背景色（红色） */
+    --emptext-color: #fe5f58; /* 几款强调型文本的颜色（红色） */
+    --hidetextcover-color: #a1a1a1; /* 隐藏文本遮罩颜色（灰色） */
+    --hidetext-color: #444; /* 隐藏文本颜色（黑色） */
+    --spanbtn-color: #44d7b6; /* 文本按钮颜色（绿色） */
+    --detailstxt-color: rgba(68,68,68,.7); /* 折叠框summary文字颜色（灰色） */
+    --detailsbg-color: #ebf9ed; /* 折叠框summary背景色（青绿色） */
+    --detailsborder-color: #00c4b6; /* 折叠框边框色（绿色） */
+    --body-color: #000000; /* 文本颜色（黑色） */
+    --para-color: #000000; /* 段落文本颜色（黑色） */
+    --commonstr-color: #232629; /* 常规字符串颜色（黑色） */
+    --commonstrbg-color: #e3e6e8; /* 常规字符串背景色（灰色） */
+    --timebodybg-color: #efeded; /* 时间轴主体部分背景色（灰色） */
+    --sidelist-selected-color: #eeeeee; /* 侧边栏条目选中背景色（灰色） */
+    --yamlbg-color: #f7f7f7; /* 头部YAML背景色（白色） */
+    --yaml-color: #585858; /* 头部YAML字体颜色（黑色） */
+    /* dy font */
+    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体（"Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;） */
+    --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+}

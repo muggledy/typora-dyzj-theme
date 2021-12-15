@@ -1,51 +1,5 @@
-@import './source/dy/iconfont.min.css';
-@import './source/zj/fonts.css';
-:root {
-    /* dy color */
-    --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
-    /*--primary-color: red;*/
-    --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
-    --codeblockbg-color: #eee; /* 代码块背景色（灰色） */
-    --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
-    --codeblockline-color: #e0f8f8; /* 代码块选中行颜色 */
-    --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
-    --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色（蓝色） */
-    --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
-    --blockquotebg-color: #f4fcff; /* blockquote背景色（淡蓝） */
-    --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
-    --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */
-    --tablefocusrow-color: #e0f8f8; /* 表格鼠标悬停行颜色（淡蓝） */
-    --tableborder-color: #c5c5c5; /* 表格边框色（黑色） */
-    --tablethbg-color: #f4fcff; /* 表格表头背景色（淡蓝） */
-    --toc-color: #00a0a0; /* 目录颜色（绿色） */
-    --atext-color: black; /* 超链接文本颜色（黑色） */
-    --abottom-color: #81d8cf; /* 超链接下划线颜色（青色） */
-    --code-color: #ff3502; /* 行内代码前景色（红色） */
-    --codebg-color: #f8f5ec; /* 行内代码背景色（淡红） */
-    --footnote-color: #e96900; /* 脚注上标前景色（红色） */
-    --footnotebg-color: #f8f8f8; /* 脚注上标背景色（淡灰） */
-    --highlight-color: red; /* 高亮文本前景色（红色） */
-    --highlightbg-color: yellow; /* 高亮文本背景色（黄色） */
-    --split-color: #00c4b6; /* 分割线颜色（绿色） */
-    --taskborder-color: red; /* 任务列表边框色（红色） */
-    --taskfocus-color: #00c4b6; /* 任务列表选中填充色（绿色） */
-    --spannote-color: #e91e64; /* 小标签背景色（红色） */
-    --emptext-color: #fe5f58; /* 几款强调型文本的颜色（红色） */
-    --hidetextcover-color: #a1a1a1; /* 隐藏文本遮罩颜色（灰色） */
-    --hidetext-color: #444; /* 隐藏文本颜色（黑色） */
-    --spanbtn-color: #44d7b6; /* 文本按钮颜色（绿色） */
-    --detailstxt-color: rgba(68,68,68,.7); /* 折叠框summary文字颜色（灰色） */
-    --detailsbg-color: #ebf9ed; /* 折叠框summary背景色（青绿色） */
-    --detailsborder-color: #00c4b6; /* 折叠框边框色（绿色） */
-    --body-color: #000000; /* 文本颜色 */
-    --para-color: #000000; /* 段落文本颜色（黑色） */
-    --commonstr-color: #232629; /* 常规字符串颜色（黑色） */
-    --commonstrbg-color: #e3e6e8; /* 常规字符串背景色（灰色） */
-    /* dy font */
-    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体（"Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;） */
-    --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
-}
-
+@import './dy/iconfont.min.css';
+@import './zj/fonts.css';
 
 
 html {
@@ -64,11 +18,37 @@ body {
     text-justify: inter-ideograph;
 }
 
+.window * {
+    color: var(--body-color) !important;
+}
+.nav-group-item.active {
+    color: black !important;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn {
+    color: black;
+}
+#sidebar-files-menu li a {
+    color: var(--body-color) !important;
+}
+#file-library-search-panel input {
+    color: var(--para-color) !important;
+}
+#sidebar-loading-template {
+    background-color: var(--bg-color) !important;
+}
+
 #write {
     max-width: 860px;
     margin: 0 auto;
     padding: 20px 30px 160px;
 }
+
+/*
+content {
+    background-color: var(--bg-color) !important;
+}
+*/
 
 
 /* 人物背景图片（右下角显示） */
@@ -76,13 +56,13 @@ body {
 
 @media only screen and (min-width: 1800px){
     content {
-        background: url(./source/bg.gif) no-repeat;
+        background: url(./bg-trans.gif) no-repeat;
         background-size : 12%;
-        background-position: 85% 100%;
+        background-position: 86% 100%;
     }
     /*效仿https://github.com/Soanguy/typora-theme-autumnus，取消下面注释，并注释上面（content）即可，换个背景（透明）风格*/
     /*content {
-        background: url(./source/bg.gif) no-repeat;
+        background: url(./bg-trans.gif) no-repeat;
         background-size : 30%;
         background-position: center 10%;
     }
@@ -105,7 +85,7 @@ body {
     }*/
 }
 content #md-searchpanel {
-    background: white;
+    background: var(--bg-color);
 }
 
 /*
@@ -121,6 +101,11 @@ content #md-searchpanel {
 	}
 }
 */
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color) !important;
+  background-clip: padding-box;
+}
 
 #write p {
     line-height: 1.8rem;
@@ -141,6 +126,19 @@ body>*:last-child {
     margin-bottom: 0 !important;
 }
 
+.mathjax-block:hover .md-rawblock-container,
+.mathjax-block:hover .md-rawblock-tooltip,
+.md-htmlblock:hover .md-rawblock-container,
+.md-htmlblock:hover .md-rawblock-tooltip {
+    background-color: var(--bg-color);
+    -webkit-animation: none;
+    animation: none;
+}
+
+.mathjax-block .md-rawblock-control, .md-htmlblock .md-rawblock-control {
+    color: var(--para-color);
+    background-color: var(--codeblockbg-color);
+}
 
 
 /** 超链接 **/
@@ -158,7 +156,7 @@ body>*:last-child {
     border-radius:6px;
     border-bottom:2px solid transparent;
     background-color:var(--abottom-color);
-    color:#ffffffe6 !important;
+    color: var(--ahover-color) !important;
     cursor:pointer;
 }
 #write a[href*="muggledy"] {
@@ -224,7 +222,7 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
 #write a.md-toc-inner:hover{
     text-decoration: underline;
     /* border-bottom: 2px solid var(--toc-color);text-decoration: none; */
-    color: var(--toc-color);
+    color: var(--toc-color) !important;
     background-color: inherit;
     border-radius: 0px;
 }
@@ -290,7 +288,6 @@ h1 {
     font-size: 2.2em;
     line-height: 1.2;
     margin: 2.4em auto 1.2em;
-    color: black;
 }
 /*
 h1:after { //一级大标题下划线（为固定长度）
@@ -469,7 +466,6 @@ h6 p {
 
 #write ol>li>*,
 #write ul>li>* {
-    color: #333;
     font-weight: normal;
 }
 
@@ -572,7 +568,7 @@ div[alt="three-table"] table tr td, div[alt="three-table"] table tr th {
     border: none;
 }
 div[alt="three-table"] table tr, div[alt="three-table"] table tr th, div[alt="three-table"] table tr:hover {
-    background-color: white;
+    background-color: var(--bg-color);
 }
 div[alt="three-table"] table tr th {
     border-bottom: 0.75pt solid;
@@ -596,7 +592,7 @@ div[alt="notitle-table"] table {
     font-size: 11pt;
 }
 div[alt="notitle-table"] table tr, div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr:hover {
-    background-color: white;
+    background-color: var(--bg-color);
 }
 div[alt="notitle-table"] table tr td:hover, div[alt="notitle-table"] table tr th:hover {
     background-color: var(--tablefocusrow-color);
@@ -675,9 +671,9 @@ div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr td {
 /* 头部YAML格式 */
 pre.md-meta-block {
     font-family: "Poppins";
-    color: #585858;
+    color: var(--yaml-color) !important;
     padding: 15px;
-    background: inherit;
+    background: var(--yamlbg-color) !important;
     /*border: 1px grey dashed !important;*/
     font-size: 0.8rem;
     line-height: 1.45;
@@ -1000,8 +996,8 @@ div[alt="fig"]{
     border-width: 1px;
 }
 
-#md-notification:before {
-    top: 10px;
+#md-notification {
+    background-color: var(--bg-color) !important;
 }
 
 /* focus mode */
@@ -1017,6 +1013,24 @@ footer {
     font-family: var(--body-font);
 }
 
+
+/* 侧边栏 */
+
+
+#typora-sidebar{
+    background-color: var(--sidebarbg-color);
+}
+
+.file-list-item:hover, .file-list-item.active {
+    background-color: var(--sidelist-selected-color);
+}
+
+.file-node-content, .file-tree-node.active .file-node-content {
+    color: var(--para-color);
+}
+.file-tree-node.active>.file-node-background {
+    background-color: var(--sidelist-selected-color);
+}
 .file-node-content:hover .file-node-icon {
     color: var(--titlebefore-color);
 }
@@ -1026,12 +1040,10 @@ footer {
 }
 .outline-item:hover {
     color: var(--titlebefore-color) !important;
+    background-color: var(--sidelist-selected-color);
 }
-/*
-.mac-seamless-mode #typora-sidebar {
-    background-color: var(--side-bar-bg-color);
-}
-*/
+
+
 .md-lang {
     color: #b4654d;
 }
@@ -1040,22 +1052,8 @@ footer {
     --item-hover-bg-color: #e6f0fe;
 }
 
-/* 侧边栏 */
-/*
-.file-list-item.active {
-    background: var(--active-file-bg-color);
-    color: var(--active-file-text-color);
-    border-left: 4px solid var(--main-6);
-}
-.file-tree-node.active>.file-node-background {
-    background-color: var(--active-file-bg-color);
-    border-left: 4px solid var(--main-6);
-    border-color: var(--active-file-border-color);
-}
-*/
-
-.file-list-item:hover {
-    background-color: #eeeeee;
+.info-panel-tab:hover{
+    color: var(--para-color);
 }
 
 @media print {
@@ -1211,7 +1209,7 @@ details {
     padding: 16px;
     margin: 1em 0;
     border-radius: 4px;
-    background: #fff;
+    background: var(--bg-color);
     font-size: 14px;
     -webkit-transition: all .28s ease;
     -moz-transition: all .28s ease;
@@ -1221,7 +1219,7 @@ details {
     -moz-transition: all .28s ease;
     -webkit-transition: all .28s ease;
     -o-transition: all .28s ease;
-    border: 1px solid #f6f6f6;
+    border: 1px solid var(--bg-color);
 }
 summary {
     display: list-item;
@@ -1370,7 +1368,7 @@ span[alt="shake"] {
 span[alt="glow"] {
 	font-family:'Audiowide';
 	text-align:center;
-	color:black;
+	/*color:black;*/
 	-webkit-transition:all 1.5s ease;
 	transition:all 1.5s ease;
 }
@@ -1446,7 +1444,7 @@ div[alt="timenode"] div[alt="body"], div[alt="timenode"] div[alt="meta"] {
 }
 div[alt="timenode"] div[alt="meta"] {
     position: relative;
-    color: #1f2d3d;
+    color: var(--para-color);
     line-height: 32px;
     font-size: .8rem;
     font-weight: 700;
@@ -1482,7 +1480,7 @@ div[alt="timenode"] div[alt="body"] {
     margin: 4px 0 10px 24px;
     padding: 10px;
     border-radius: 12px;
-    background: #efeded;
+    background: var(--timebodybg-color);
     display: inline-block;
     font-size: .9rem;
 }
@@ -1495,7 +1493,7 @@ div[alt="timenode"]:last-child:after {
     height: calc(100% - 30px);
 }
 div[alt="timenode"]:hover div[alt="meta"]{
-    color:#444;
+    color: var(--para-color);
 }
 div[alt="timenode"]:hover div[alt="meta"]:before{
     background:rgba(255,87,34,.5)
@@ -1521,4 +1519,16 @@ div[alt="timenode"]:hover div[alt="meta"]:after{
 .footnotes {
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+
+/* KBD按键样式 */
+
+
+kbd {
+    font: var(--code-font);
+    font-size: .8em;
+    background: var(--bg-color);
+    color: var(--body-color);
+    border-radius: 5px;
 }

@@ -1,0 +1,60 @@
+@import url(./source/dyzj.css);
+@import url(./source/darkcode.css);
+
+:root {
+    /* dy color */
+    --select-text-bg-color: #6e7b99; /* 文本选中背景色 */
+    /*--primary-color: red;*/
+    --bg-color: #262626; /* 整体背景色 */
+    --sidebarbg-color: #1a1a1a; /* 侧边栏背景色 */
+    --focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色 */
+    --codeblockbg-color: #1a1a1a; /* 代码块背景色 */
+    --codeblockfont-color: #a9a9a9; /* 代码块默认字体颜色 */
+    --codeblockline-color: #263238; /* 代码块选中行颜色 */
+    --titlebefore-color: #00c4b6; /* 各级标题点缀颜色 */
+    --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色 */
+    --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色 */
+    --blockquotebg-color: #263238; /* blockquote背景色 */
+    --ulol-color: #81accf; /* 有序无序列表前缀颜色 */
+    --tableevenrow-color: #1a1a1a; /* 表格偶数行颜色 */
+    --tablefocusrow-color: #263238; /* 表格鼠标悬停行颜色 */
+    --tableborder-color: #2f642e; /* 表格边框色 */
+    --tablethbg-color: #2f845e; /* 表格表头背景色 */
+    --scrollbar-color: #2f845e; /* 滚动条颜色 */
+    --toc-color: #00a0a0; /* 目录颜色 */
+    --atext-color: #a9a9a9; /* 超链接文本颜色 */
+    --ahover-color: black; /* 超链接悬停文本颜色 */
+    --abottom-color: #81d8cf; /* 超链接下划线颜色 */
+    --code-color: #ff3502; /* 行内代码前景色 */
+    --codebg-color: #263238; /* 行内代码背景色 */
+    --footnote-color: #e96900; /* 脚注上标前景色 */
+    --footnotebg-color: #f8f8f8; /* 脚注上标背景色 */
+    --highlight-color: red; /* 高亮文本前景色 */
+    --highlightbg-color: yellow; /* 高亮文本背景色 */
+    --split-color: #00c4b6; /* 分割线颜色 */
+    --taskborder-color: red; /* 任务列表边框色 */
+    --taskfocus-color: #00c4b6; /* 任务列表选中填充色 */
+    --spannote-color: #e91e64; /* 小标签背景色 */
+    --emptext-color: #fe5f58; /* 几款强调型文本的颜色 */
+    --hidetextcover-color: #a1a1a1; /* 隐藏文本遮罩颜色 */
+    --hidetext-color: #a9a9a9; /* 隐藏文本颜色 */
+    --spanbtn-color: #44d7b6; /* 文本按钮颜色 */
+    --detailstxt-color: black; /* 折叠框summary文字颜色 */
+    --detailsbg-color: #6e7b99; /* 折叠框summary背景色 */
+    --detailsborder-color: #5fa7e4; /* 折叠框边框色 */
+    --body-color: #e6e6e6; /* 文本颜色 */
+    --para-color: #a9a9a9; /* 段落文本颜色 */
+    --commonstr-color: #a9a9a9; /* 常规字符串颜色 */
+    --commonstrbg-color: #263238; /* 常规字符串背景色 */
+    --timebodybg-color: #a0a0a0; /* 时间轴主体部分背景色 */
+    --sidelist-selected-color: #263238; /* 侧边栏条目选中背景色 */
+    --yamlbg-color: #1a1a1a; /* 头部YAML背景色 */
+    --yaml-color: #7f9bb7; /* 头部YAML字体颜色 */
+    /* dy font */
+    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+    --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+}
+
+img {
+    filter: brightness(80%);
+}
