@@ -15,7 +15,8 @@
     --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色 */
     --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色 */
     --blockquotebg-color: #263238; /* blockquote背景色 */
-    --ulol-color: #81accf; /* 有序无序列表前缀颜色 */
+    --ulol-color: #8b8b8b; /* 有序无序列表前缀颜色 */
+    --olfore-color: white; /* 有序列表字体颜色 */
     --tableevenrow-color: #1a1a1a; /* 表格偶数行颜色 */
     --tablefocusrow-color: #263238; /* 表格鼠标悬停行颜色 */
     --tableborder-color: #2f642e; /* 表格边框色 */
@@ -53,6 +54,8 @@
     /* dy font */
     --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+    /* bg image */
+    --bgimg-url: url(./bg-dark.gif);
 }
 
 img {

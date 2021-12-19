@@ -15,6 +15,7 @@
     --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
     --blockquotebg-color: #f4fcff; /* blockquote背景色（淡蓝） */
     --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
+    --olfore-color: #fff; /* 有序列表字体颜色（白色） */
     --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */
     --tablefocusrow-color: #e0f8f8; /* 表格鼠标悬停行颜色（淡蓝） */
     --tableborder-color: #c5c5c5; /* 表格边框色（黑色） */
@@ -52,4 +53,6 @@
     /* dy font */
     --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体（"Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;） */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+    /* bg image */
+    --bgimg-url: url(./bg-light.gif);
 }
