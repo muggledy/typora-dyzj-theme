@@ -14,7 +14,7 @@
 
 标题样式来自[zj主题][1]^[1]^（这是一个参考链接，按住<kbd>ctrl</kbd>键并点击将自动打开浏览器并跳转至相关链接，其中上标`[1]`只是一个额外的标注）
 
-注：部分样式需要在偏好设置中开启，如上下标、行内公式、图表等。Markdown写法参考说明文档<sup><a href="https://support.typora.io/Markdown-Reference" alt="ref">🚀</a></sup>，试用其他如印象等在线Markdown编辑器<span alt="ref">[[Ref 1](https://www.zybuluo.com/mdeditor),[Ref 2](https://maxiang.io/),[Ref 3](https://editoe.com/)]</span>
+注：部分样式需要在偏好设置中开启，如上下标、行内公式、图表等。Markdown写法参考说明文档<sup><a href="https://support.typora.io/Markdown-Reference" alt="ref">🚀</a></sup>，试用其他如印象等在线Markdown编辑器<span alt="ref">[[Ref 1](https://www.zybuluo.com/mdeditor),[Ref 2](https://maxiang.io/),[Ref 3](https://editoe.com/),[Ref 4](https://b3log.org/vditor)]</span>
 
 行内公式：$\lim\limits_{x \to \infty} \exp(-x)=0$，行间公式：
 $$
@@ -119,7 +119,8 @@ def decorator(func):
 
 <details>
     <summary>折叠标签</summary>
-    青青子衿，悠悠我心
+    <p>PDF文件预览示例（<code>https://zhixingo.github.io/plays/pdfv/?url=PDF文件链接</code>）：</p>
+    <iframe src="https://zhixingo.github.io/plays/pdfv/?url=https://files.catbox.moe/5iz1r9.pdf" height="400" frameborder="0" scrolling="no"></iframe>
 </details>
 > 关于Typora对HTML的支持说明：<https://support.typora.io/HTML/>
 

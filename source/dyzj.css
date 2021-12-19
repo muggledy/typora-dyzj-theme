@@ -56,13 +56,13 @@ content {
 
 @media only screen and (min-width: 1800px){
     content {
-        background: url(./bg-trans.gif) no-repeat;
+        background: var(--bgimg-url) no-repeat;
         background-size : 12%;
         background-position: 86% 100%;
     }
     /*效仿https://github.com/Soanguy/typora-theme-autumnus，取消下面注释，并注释上面（content）即可，换个背景（透明）风格*/
     /*content {
-        background: url(./bg-trans.gif) no-repeat;
+        background: var(--bgimg-url) no-repeat;
         background-size : 30%;
         background-position: center 10%;
     }
@@ -288,17 +288,29 @@ h1 {
     font-size: 2.2em;
     line-height: 1.2;
     margin: 2.4em auto 1.2em;
+    display:block;
 }
-/*
-h1:after { //一级大标题下划线（为固定长度）
+h1 span{
+    display: inline-block;
+    position: relative;
+}
+h1 span:after {
+    background: var(--titlebefore-color);
+    bottom: -5px;
     content: '';
-    display: block;
-    margin: 0.2em auto 0;
-    width: 100px;
     height: 2px;
-    border-bottom: 2px solid var(--titlebefore-color);
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    width: 100%;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 }
-*/
+h1:hover span:after {
+    transform: scaleX(1);
+}
+
 h2 {
     margin: 1.8em auto 1.2em;
     font-size: 1.8em;
@@ -1104,7 +1116,7 @@ footer {
 #write ol li:before, #write ul li:before, #write .ol .li:before, #write .ul .li:before {
     position: absolute;
     background: var(--ulol-color); /* #81d8cf */
-    color: #fff;
+    color: var(--olfore-color);
     cursor: pointer;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
