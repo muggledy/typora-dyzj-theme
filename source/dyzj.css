@@ -1201,7 +1201,7 @@ font {
     line-height: 1;
     color: #fff;
     text-align: center;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
     vertical-align: baseline;
     border-radius: .1rem;
     border-radius: 6px;

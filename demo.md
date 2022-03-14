@@ -127,9 +127,10 @@ def decorator(func):
 
 <details>
     <summary>折叠标签</summary>
-    <p>PDF文件预览示例（<code>https://zhixingo.github.io/plays/pdfv/?url=PDF文件链接</code>）：</p>
-    <iframe src="https://zhixingo.github.io/plays/pdfv/?url=https://files.catbox.moe/5iz1r9.pdf" height="400" frameborder="0" scrolling="no"></iframe>
+    <p>PDF文件预览示例（<code>https://webstack.muggledy.top/plays/pdfv/?url=PDF文件链接</code>）：</p>
+    <iframe src="https://webstack.muggledy.top/plays/pdfv/?url=https://files.catbox.moe/5iz1r9.pdf" height="400" frameborder="0" scrolling="no"></iframe>
 </details>
+
 > 关于Typora对HTML的支持说明：<https://support.typora.io/HTML/>
 
 [Emoji表情符号](https://www.webfx.com/tools/emoji-cheat-sheet/)：:smile:（`:smile:`），Decimal NCRs或Hexadecimal NCRs^[2]^编码也是受支持的，譬如“&#31505;&#21741;”：&#128514;（`&#128514;`）或&#x1F602;（`&#x1F602;`）
