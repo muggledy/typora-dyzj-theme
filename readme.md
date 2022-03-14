@@ -13,7 +13,7 @@
 ## 使用指南
 
 1. 依次点击Typora菜单栏的“文件”-“偏好设置”，然后点击“外观”-“打开主题文件夹”
-2. 下载本主题样式，解压缩至上述“主题文件夹”（其中“dyzj-light.css”、“dyzj-dark.css”和“source/”文件是必须的，其他可以删除），重启Typora，点击Typora菜单栏的“主题”，选择“Dyzj”选项即可
+2. 下载本主题样式，解压缩至上述“主题文件夹”（其中“dyzj-light.css”、“dyzj-dark.css”和“source/”文件是必须的，其他可以删除），重启Typora，点击Typora菜单栏的“主题”，选择“Dyzj Light”或“Dyzj Dark”选项即可
 
 <details>
     <summary>修改主题配色或字体（可选操作）</summary>

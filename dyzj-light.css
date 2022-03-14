@@ -14,6 +14,12 @@
     --codeblocknum-color: rgba(128, 128, 255, 0.8); /* 代码块行编号颜色（蓝色） */
     --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
     --blockquotebg-color: #f4fcff; /* blockquote背景色（淡蓝） */
+    --blockquotedangericon-color: #db524f; /* 危险型blockquote提示图标色（红色） */
+    --blockquotedangerbg-color: #fcf1f2; /* 危险型blockquote背景色（淡红） */
+    --blockquotesuccessicon-color: #5cb85c; /* 成功型blockquote提示图标色（绿色） */
+    --blockquotesuccessbg-color: #eef7f0; /* 成功型blockquote背景色（淡绿） */
+    --blockquotewarnicon-color: #f0ad4e; /* 警告型blockquote提示图标色（橙色） */
+    --blockquotewarnbg-color: #fef8ea; /* 警告型blockquote背景色（淡橙） */
     --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
     --olfore-color: #fff; /* 有序列表字体颜色（白色） */
     --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */

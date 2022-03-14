@@ -523,6 +523,33 @@ blockquote:hover:before {
     color: var(--focus-color);
 }
 */
+blockquote[alt="danger"] {
+    border-left-color: var(--blockquotedangericon-color);
+    background-color: var(--blockquotedangerbg-color);
+}
+blockquote[alt="danger"]::before {
+    content: '\f071';
+    font-family: FontAwesome;
+    color: var(--blockquotedangericon-color);
+}
+blockquote[alt="success"] {
+    border-left-color: var(--blockquotesuccessicon-color);
+    background-color: var(--blockquotesuccessbg-color);
+}
+blockquote[alt="success"]::before {
+    content: '\f058';
+    font-family: FontAwesome;
+    color: var(--blockquotesuccessicon-color);
+}
+blockquote[alt="warn"] {
+    border-left-color: var(--blockquotewarnicon-color);
+    background-color: var(--blockquotewarnbg-color);
+}
+blockquote[alt="warn"]::before {
+    content: '\f146';
+    font-family: FontAwesome;
+    color: var(--blockquotewarnicon-color);
+}
 
 
 /** 表格样式 **/
