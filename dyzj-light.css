@@ -20,6 +20,8 @@
     --blockquotesuccessbg-color: #eef7f0; /* 成功型blockquote背景色（淡绿） */
     --blockquotewarnicon-color: #f0ad4e; /* 警告型blockquote提示图标色（橙色） */
     --blockquotewarnbg-color: #fef8ea; /* 警告型blockquote背景色（淡橙） */
+    --blockquotequestionicon-color: #FF8C00; /* 问题型blockquote提示图标色（橙色） */ 
+    --blockquotequestionbg-color: #FFFACD; /* 问题型blockquote背景色（淡橙） */
     --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
     --olfore-color: #fff; /* 有序列表字体颜色（白色） */
     --tableevenrow-color: #eee; /* 表格偶数行颜色（淡灰） */

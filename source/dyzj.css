@@ -549,8 +549,8 @@ blockquote[alt="danger"] {
     background-color: var(--blockquotedangerbg-color);
 }
 blockquote[alt="danger"]::before {
-    content: '\f071';
-    font-family: FontAwesome;
+    content: '\e695';
+    font-family: "iconfont";
     color: var(--blockquotedangericon-color);
 }
 blockquote[alt="success"] {
@@ -558,8 +558,8 @@ blockquote[alt="success"] {
     background-color: var(--blockquotesuccessbg-color);
 }
 blockquote[alt="success"]::before {
-    content: '\f058';
-    font-family: FontAwesome;
+    content: '\e614';
+    font-family: "iconfont";
     color: var(--blockquotesuccessicon-color);
 }
 blockquote[alt="warn"] {
@@ -567,11 +567,19 @@ blockquote[alt="warn"] {
     background-color: var(--blockquotewarnbg-color);
 }
 blockquote[alt="warn"]::before {
-    content: '\f146';
-    font-family: FontAwesome;
+    content: '\e8c7';
+    font-family: "iconfont";
     color: var(--blockquotewarnicon-color);
 }
-
+blockquote[alt="question"] {
+    border-left-color: var(--blockquotequestionicon-color);
+    background-color: var(--blockquotequestionbg-color);
+}
+blockquote[alt="question"]::before {
+    content: '\eb81';
+    font-family: "iconfont";
+    color: var(--blockquotequestionicon-color);
+}
 
 /** 表格样式 **/
 

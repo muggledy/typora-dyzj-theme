@@ -34,6 +34,8 @@ $$
 
 <blockquote alt="success"><p>成功型提示块</p></blockquote>
 
+<blockquote alt="question"><p>问题型提示块</p></blockquote>
+
 <blockquote alt="warn"><p>警告型提示块</p></blockquote>
 
 <blockquote alt="danger"><p>危险型提示块</p></blockquote>

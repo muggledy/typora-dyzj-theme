@@ -21,6 +21,8 @@
     --blockquotesuccessbg-color: #5b6b5f; /* 成功型blockquote背景色 */
     --blockquotewarnicon-color: #f0ad4e; /* 警告型blockquote提示图标色 */
     --blockquotewarnbg-color: #5a564c; /* 警告型blockquote背景色 */
+    --blockquotequestionicon-color: #FFD700; /* 问题型blockquote提示图标色 */ 
+    --blockquotequestionbg-color: #FFFACD; /* 问题型blockquote背景色 */
     --ulol-color: #8b8b8b; /* 有序无序列表前缀颜色 */
     --olfore-color: white; /* 有序列表字体颜色 */
     --tableevenrow-color: #1a1a1a; /* 表格偶数行颜色 */
