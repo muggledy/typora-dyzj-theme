@@ -97,7 +97,7 @@ def decorator(func):
 
 [跳转](#二级标题)至指定标题（锚点），也可以在任意位置通过`<a name="锚点名" alt="none"> </a>`（为了方便编辑，typora会显示空标签或`style="display:none"`的标签，但填充一个空格就可以被隐藏，在导出为HTML文件时，由于该款超链接样式有一个padding宽度，所以空链接还是会显示下划线，`alt="none"`用于避免该问题，如果自定义的锚点有文字说明，则不要使用`alt="none"`）设定锚点，示例：[求点个赞呗](#star)
 
-<a href="#" alt="null">无样式链接</a>，主要用于图片超链接等，如：<a href="#" alt="null"><img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github"><img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"></a>
+<a href="#" alt="null">无样式链接</a>，主要用于图片超链接等，如：<a href="#" alt="null"><img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github"><img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"></a>（行内图片）
 
 上下标：X^2^, H~2~o，下标如果是多个单词或字符并以空格分隔，需要对空格进行转义，即在空格前面加`\`，譬如`X~下标1\ 下标2~`（X~下标1\ 下标2~）。要显示\*特殊字符等，也是通过反斜杠转义
 
@@ -123,6 +123,8 @@ s="<span md-inline='"+g+"'"+S+" contenteditable='false' class='md-image md-img-l
 ```
 
 或者直接在图片下方手动写图释（适用于非img标签）：`<div alt="fig">图释说明</div>`
+
+> Typora导出的HTML文件，图片不显示注释及阴影等特效，部分样式地址为<span alt="str">file://</span>本地文件，一旦将HTML文件拷贝到其他计算机，就会显示异常，这些问题可以通过脚本修复，执行`python export_html_help.py <HTML文件>`，这会在HTML文件所在目录下生成一个<span alt="str">.temp/</span>文件夹，其中是<span alt="str">file://</span>本地文件的拷贝，为方便，可考虑将引用的资源（图片、视频等）文件均放在此目录下，当然，也可以通过`--output`参数更改默认的<span alt="str">.temp</span>名字
 
 <audio controls="controls">
   <source src="./temp/The Sound Of Silence.mp3" type="audio/mp3" />
