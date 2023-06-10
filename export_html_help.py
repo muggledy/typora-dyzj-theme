@@ -5,6 +5,12 @@ from contextlib import contextmanager
 import argparse
 import hashlib
 
+'''
+1. export demo.html of markdown in typora editor.
+2. exec `python vim export_html_help.py demo.html`, this will generate a directory named .temp/ to store resources referenced by the html page,
+   this script aims to correct error in missing image notiation.
+'''
+
 cur_dir = os.getcwd() #os.path.dirname(os.path.realpath(__file__))
 img_wrapper_js = '''<script>Array.from(document.getElementsByTagName("img")).forEach(function(item,index,array){var dyimgdad=item.parentElement;if(dyimgdad.tagName=="P"){var index=[].indexOf.call(dyimgdad.childNodes,item);dyimgdad.removeChild(item);var dyspan=document.createElement("span");dyspan.classList.add("md-image");dyspan.setAttribute("alt",item.getAttribute("alt")?".  "+(/^(shadow-|blur-|gray-)?(.*)$/.exec(item.getAttribute("alt"))[2]):"");dyspan.appendChild(item);index==dyimgdad.childNodes.length?dyimgdad.appendChild(dyspan):dyimgdad.insertBefore(dyspan,Array.from(dyimgdad.childNodes).filter(function(v,k){return k==index})[0])}})</script>'''
 get_cur_time = lambda : datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')

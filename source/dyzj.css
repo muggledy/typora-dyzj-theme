@@ -502,8 +502,8 @@ h6 p {
     font-weight: normal;
 }
 
-#write ol>li>*:not(ol):not(ul),
-#write ul>li>*:not(ol):not(ul) {
+#write ol>li>*:not(ol):not(ul):not(details),
+#write ul>li>*:not(ol):not(ul):not(details) {
     padding-left: .25rem;
 }
 
@@ -1210,7 +1210,7 @@ footer {
 }
 
 /* 列表子项上下间隔调整 */
-#write ul li *, #write ol li *, #write .ul .li *, #write .ol .li * {
+#write ul li input, #write ol li input, #write .ul .li input, #write .ol .li input {
     margin-top: 0px;
     margin-bottom: 0px;
 }
