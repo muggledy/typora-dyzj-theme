@@ -7,7 +7,7 @@ import hashlib
 
 '''
 1. export demo.html of markdown in typora editor.
-2. exec `python vim export_html_help.py demo.html`, this will generate a directory named .temp/ to store resources referenced by the html page,
+2. exec `python export_html_help.py demo.html`, this will generate a directory named .temp/ to store resources referenced by the html page,
    this script aims to correct error in missing image notiation.
 '''
 
